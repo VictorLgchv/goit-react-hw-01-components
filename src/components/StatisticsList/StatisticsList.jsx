@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
-import { StatisticsCard } from "../StatisticsCard/StatisticsCard";
+import { StatisticsCard } from '../StatisticsCard/StatisticsCard';
 import { Stats, Title, StatList, StatListItem } from './StatisicsList.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <Stats>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatList>
-      {stats.map(item => (
-        <StatListItem key={item.id} style={{ backgroundColor: "#" + getRandomColor()}}>
-          <StatisticsCard item={ item} />
-        </StatListItem>
-      ))
-      }
+        {stats.map(item => (
+          <StatListItem
+            key={item.id}
+            style={{ backgroundColor: '#' + getRandomColor() }}
+          >
+            <StatisticsCard item={item} />
+          </StatListItem>
+        ))}
       </StatList>
     </Stats>
-  )
+  );
 };
 
 function getRandomColor() {
@@ -29,4 +31,4 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
-}
+};
