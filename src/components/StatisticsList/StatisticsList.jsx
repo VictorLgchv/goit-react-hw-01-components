@@ -4,11 +4,11 @@ import { Stats, Title, StatList, StatListItem } from './StatisicsList.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Stats className="statistics">
-      <Title className="title">{title}</Title>
-      <StatList className="stat-list">
+    <Stats>
+      <Title>{title}</Title>
+      <StatList>
       {stats.map(item => (
-        <StatListItem className="item" key={item.id} style={{ backgroundColor: "#" + getRandomColor()}}>
+        <StatListItem key={item.id} style={{ backgroundColor: "#" + getRandomColor()}}>
           <StatisticsCard item={ item} />
         </StatListItem>
       ))

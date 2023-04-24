@@ -4,8 +4,8 @@ import { ItemLabel, ItemPercentage } from './StatisticsCard.styled'
 export const StatisticsCard = ({ item: {label, percentage} }) => {
   return (
     <>
-    <ItemLabel className="item__label">{label}</ItemLabel>
-    <ItemPercentage className="item__percentage">{percentage}%</ItemPercentage>
+    <ItemLabel>{label}</ItemLabel>
+    <ItemPercentage>{percentage}%</ItemPercentage>
     </>
   )
 }

@@ -21,26 +21,26 @@ export const ProfileCard = ({
 }) => {
   return (
     <>
-      <Profile className="profile">
-        <Description className="description">
-          <Avatar src={avatar} alt="User avatar" className="avatar" />
-          <Name className="name">{username}</Name>
-          <Tag className="tag">@{tag}</Tag>
-          <Location className="location">{location}</Location>
+      <Profile >
+        <Description >
+          <Avatar src={avatar} alt="User avatar"/>
+          <Name >{username}</Name>
+          <Tag >@{tag}</Tag>
+          <Location >{location}</Location>
         </Description>
 
-        <Stats className="stats">
+        <Stats >
           <li>
-            <Label className="label">Followers</Label>
-            <Quantity className="quantity">{followers}</Quantity>
+            <Label >Followers</Label>
+            <Quantity >{followers}</Quantity>
           </li>
           <li>
-            <Label className="label">Views</Label>
-            <Quantity className="quantity">{views}</Quantity>
+            <Label>Views</Label>
+            <Quantity>{views}</Quantity>
           </li>
           <li>
-            <Label className="label">Likes</Label>
-            <Quantity className="quantity">{likes}</Quantity>
+            <Label>Likes</Label>
+            <Quantity>{likes}</Quantity>
           </li>
         </Stats>
       </Profile>
